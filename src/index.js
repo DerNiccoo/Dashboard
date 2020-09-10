@@ -9,17 +9,14 @@ import { createBrowserHistory } from "history";
 const hist = createBrowserHistory();
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Router history={hist}>
-      <Switch>
-        <Route path="/dashboard" component={App} />
-        <Route path="/revenue" component={App} />
-        <Route path="/expenditure" component={App} />
-        <Redirect from="/" to="/dashboard" />
-      </Switch>
-    </Router>
-    ,
-  </React.StrictMode>,
+  <Router history={hist}>
+    <Switch>
+      <Route path="/dashboard" component={App} />
+      <Route path="/revenue" component={App} />
+      <Route path="/expenditure" component={App} />
+      <Redirect from="/" to="/dashboard" />
+    </Switch>
+  </Router>,
   document.getElementById("root")
 );
 
